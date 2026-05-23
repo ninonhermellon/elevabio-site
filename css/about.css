@@ -3,16 +3,16 @@
 /* Hero Section */
 .about-hero {
   text-align: center;
-  padding: 60px 0;
-  background-color: #fafafa;
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--gray-light);
   border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
 .about-hero-title {
-  font-size: 38px;
-  font-weight: 800;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
   color: var(--dark-text);
-  margin-top: 10px;
+  margin-top: var(--spacing-md);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -20,9 +20,9 @@
 }
 
 .about-hero-subtitle {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   color: var(--text-muted);
-  margin-top: 15px;
+  margin-top: var(--spacing-lg);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -32,7 +32,7 @@
 .about-story-grid {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: var(--spacing-5xl);
 }
 
 .story-text, .story-image {
@@ -41,20 +41,20 @@
 }
 
 .story-text h2 {
-  font-size: 28px;
+  font-size: var(--font-size-3xl);
   color: var(--dark-text);
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-xl);
 }
 
 .story-text p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: var(--line-height-relaxed);
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .image-rounded {
-  border-radius: var(--radius-md, 20px);
+  border-radius: var(--radius-md);
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -65,12 +65,12 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  gap: 30px;
+  gap: var(--spacing-2xl);
 }
 
 .stat-counter-item .stat-number {
-  font-size: 42px;
-  font-weight: 800;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
   color: var(--primary-green);
   display: block;
 }
@@ -78,24 +78,24 @@
 .stat-counter-item .stat-desc {
   font-size: 15px;
   color: var(--dark-text);
-  font-weight: 600;
-  margin-top: 5px;
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--spacing-sm);
 }
 
 /* Grille des Valeurs */
 .values-grid {
   display: flex;
-  gap: 30px;
+  gap: var(--spacing-xl);
 }
 
 .value-card {
   flex: 1;
   background-color: var(--white);
-  padding: 30px;
-  border-radius: var(--radius-sm, 14px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
   border: 1px solid rgba(0,0,0,0.02);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal) ease;
 }
 
 .value-card:hover {
@@ -103,20 +103,20 @@
 }
 
 .value-icon {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .value-card h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   color: var(--dark-text);
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-md);
 }
 
 .value-card p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   color: var(--text-muted);
 }
 

@@ -42,13 +42,13 @@ body {
 
 /* Elevabio Ferme Avicole — Palette de couleurs officielle */
 :root {
-  /* Couleurs Elevabio */
+  /* === COULEURS PRIMAIRES === */
   --primary-green: #308225;        /* Vert Élevage - Primaire */
   --secondary-orange: #f9932f;     /* Orange Soleil - Secondaire */
   --tertiary-green: #5CB82C;       /* Vert Tendre - Tertiaire */
   --dark-text: #131313;            /* Noir Ébène - Contraste */
   
-  /* Couleurs compatibles */
+  /* === COULEURS COMPATIBLES === */
   --green-dark: #308225;
   --green-mid: #5CB82C;
   --lime: #f9932f;
@@ -56,18 +56,74 @@ body {
   --cream: #f5f5f0;
   --white: #ffffff;
   --text-muted: #6b7280;
+  --gray-light: #fafafa;
+  --gray-border: #e5e7eb;
+  --gray-bg: #f8f9fa;
   
-  /* Dégradés */
+  /* === DÉGRADÉS === */
   --gradient-nature: linear-gradient(to right, #308225, #5CB82C);
   --gradient-aurore: linear-gradient(to bottom right, #f9932f, #5CB82C);
   
+  /* === BORDER RADIUS === */
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
   --radius-pill: 999px;
+  
+  /* === OMBRES === */
   --shadow-soft: 0 8px 32px rgba(48, 130, 37, 0.08);
   --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.04);
+  
+  /* === TRANSITIONS === */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  
+  /* === ESPACEMENTS === */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 60px;
+  --spacing-5xl: 80px;
+  
+  /* === TYPO === */
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  
+  /* === LAYOUT === */
   --max-width: 1280px;
+  --container-padding: 48px;
+  --header-height: 70px;
+  --sidebar-width: 260px;
+  --z-header: 50;
+  --z-sidebar: 1000;
+  --z-modal: 2000;
+  
+  /* === TYPO FONT === */
   --font: "Plus Jakarta Sans", "Aptos", -apple-system, sans-serif;
 }
 
@@ -411,7 +467,7 @@ body.nav-open {
 }
 
 .nav-main a {
-  color: rgb(255, 255, 255);
+  color: var(--primary-green);
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.2s;
@@ -419,7 +475,7 @@ body.nav-open {
 
 .nav-main a:hover,
 .nav-main a.active {
-  color: var(--white);
+  color: var(--secondary-orange);
 }
 
 .header-actions {
@@ -1495,12 +1551,12 @@ body.nav-open {
 }
 
 .site-header--solid .nav-main a {
-  color: var(--dark-text);
+  color: var(--primary-green);
 }
 
 .site-header--solid .nav-main a:hover,
 .site-header--solid .nav-main a.active {
-  color: var(--primary-green);
+  color: var(--secondary-orange);
 }
 
 .page-hero {

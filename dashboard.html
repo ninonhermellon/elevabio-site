@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -1005,4 +1006,1013 @@
 
   <script src="js/dashboard.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevaBio — Dashboard Admin</title>
+  <!-- En-têtes de sécurité (miroir .htaccess — defense in depth) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <script src="js/security.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="eb-dashboard">
+  
+  <aside class="eb-sidebar">
+    <div class="eb-brand">
+      <div class="eb-brand-info">
+         <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="40" height="40">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      </div>
+    </div>
+
+    <nav class="eb-menu">
+      <a href="#vue-ensemble" class="eb-menu-link active" data-target="vue-ensemble">
+        <i class="fa-solid fa-chart-pie eb-icon"></i> Vue d'ensemble
+      </a>
+      <a href="#clients" class="eb-menu-link" data-target="clients">
+        <i class="fa-solid fa-user-group eb-icon"></i> Clients
+      </a>
+      <a href="#" class="eb-menu-link" data-target="commandes">
+        <i class="fa-solid fa-basket-shopping"></i> Commandes
+        </a>
+      <a href="#devis-factures" class="eb-menu-link" data-target="devis-factures">
+        <i class="fa-solid fa-file-invoice-dollar eb-icon"></i> Devis & Factures
+      </a>
+      <a href="#formations" class="eb-menu-link" data-target="formations">
+        <i class="fa-solid fa-graduation-cap eb-icon"></i> Formations
+      </a>
+      <a href="#utilisateurs" class="eb-menu-link" data-target="utilisateurs">
+        <i class="fa-solid fa-user-shield eb-icon"></i> Utilisateurs
+      </a>
+      <a href="#configuration" class="eb-menu-link" data-target="configuration">
+        <i class="fa-solid fa-sliders eb-icon"></i> Configuration
+      </a>
+    </nav>
+  </aside>
+
+  <div class="eb-main-panel">
+    
+    <header class="eb-topbar">
+      <div class="eb-search-bar">
+        <i class="fa-solid fa-magnifying-glass eb-search-icon"></i>
+        <input type="text" placeholder="Recherche rapide...">
+      </div>
+      <div class="eb-admin-profile">
+        <div class="eb-profile-details">
+          <span class="eb-username">B. Ninon</span>
+          <span class="eb-userrole">Super Admin</span>
+        </div>
+        <div class="eb-avatar">BN</div>
+      </div>
+    </header>
+
+    <main class="eb-content-wrapper">
+      
+      <section id="vue-ensemble" class="dashboard-section active">
+        <div class="eb-cards-grid">
+          <div class="eb-kpi-card">
+            <p class="eb-kpi-title">Commandes du mois</p>
+            <h4 class="eb-kpi-num">142</h4>
+          </div>
+          <div class="eb-kpi-card">
+            <p class="eb-kpi-title">Inscrits Formations</p>
+            <h4 class="eb-kpi-num">48</h4>
+          </div>
+          <div class="eb-kpi-card">
+            <p class="eb-kpi-title">Chiffre d'Affaires</p>
+            <h4 class="eb-kpi-num">2.450.000 F</h4>
+          </div>
+        </div>
+
+        <div class="eb-charts-row">
+          <div class="eb-chart-box">
+            <div class="eb-chart-header">
+              <h3><i class="fa-solid fa-line-chart"></i> Évolution des revenus</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="eb-chart-box">
+            <div class="eb-chart-header">
+              <h3><i class="fa-solid fa-pie-chart"></i> Répartition des ventes</h3>
+            </div>
+            <div class="chart-container">
+              <canvas id="categoryChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="eb-table-card">
+          <div class="eb-table-card-header">
+            <h3>Suivi des demandes</h3>
+            <button type="button" class="eb-btn-add" id="btn-trigger-modal-commande" style="background-color: #f9932f; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+        <i class="fa-solid fa-cart-plus"></i> Nouvelle Commande
+      </button>
+    
+          </div>
+          <div class="eb-responsive-table">
+            <table class="eb-dashboard-table" id="table-demandes">
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Prestation / Produit</th>
+                  <th>Montant</th>
+                  <th>Statut</th>
+                  <th class="eb-text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="eb-client-cell">
+                      <div class="eb-client-avatar">MB</div>
+                      <div>
+                        <div class="eb-client-name">Madingou Brice</div>
+                        <div class="eb-client-location">Pointe-Noire</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>100 Œufs Fertiles Goliath</td>
+                  <td><span class="eb-weight-600">150 000 FCFA</span></td>
+                  <td><span class="eb-status-badge success">Livré</span></td>
+                  <td class="eb-text-right">
+                    <button class="eb-btn-edit btn-trigger-edit"><i class="fa-solid fa-pen-to-square"></i> Modifier</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="eb-client-cell">
+                      <div class="eb-client-avatar">KG</div>
+                      <div>
+                        <div class="eb-client-name">Kibouka Grace</div>
+                        <div class="eb-client-location">Brazzaville</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Formation Niveau Débutant</td>
+                  <td><span class="eb-weight-600">75 000 FCFA</span></td>
+                  <td><span class="eb-status-badge warning">En attente</span></td>
+                  <td class="eb-text-right">
+                    <button class="eb-btn-edit btn-trigger-edit"><i class="fa-solid fa-pen-to-square"></i> Modifier</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+<section id="clients" class="dashboard-section">
+  <div class="eb-table-card">
+    <div class="eb-table-card-header">
+      <div>
+        <h3>Base de données Clients</h3>
+        <p class="eb-section-subtitle font-13">Fiches d'identité et suivi technique des éleveurs du réseau ElevaBio.</p>
+      </div>
+      <button type="button" class="eb-btn-add" id="btn-trigger-modal-client">
+        <i class="fa-solid fa-user-plus"></i> Nouveau Client
+      </button>
+    </div>
+
+    <div class="eb-responsive-table">
+      <table class="eb-dashboard-table" id="table-clients-formal">
+        <thead>
+          <tr>
+            <th>Éleveur / Contact</th>
+            <th>Localisation</th>
+            <th>Type d'Élevage</th>
+            <th>Taille Cheptel</th>
+            <th class="eb-text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+  <tr>
+    <td>
+      <div class="eb-client-cell">
+        <div class="eb-client-avatar client-av-1">MB</div>
+        <div>
+          <div class="eb-client-name">Madingou Brice</div>
+          <div class="eb-client-location">+242 06 123 4567</div>
+        </div>
+      </div>
+    </td>
+    <td>Pointe-Noire</td>
+    <td><span class="eb-breed-badge goliath">Goliath</span></td>
+    <td><span class="eb-weight-600">350 sujets</span></td>
+    <td class="eb-text-right">
+      <button class="eb-btn-edit btn-trigger-edit-client" style="margin-right: 8px;"><i class="fa-solid fa-pen-to-square"></i></button>
+      <button class="eb-btn-delete-row" onclick="deleteClientRow(this)"><i class="fa-solid fa-trash-can"></i></button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="eb-client-cell">
+        <div class="eb-client-avatar client-av-2">KG</div>
+        <div>
+          <div class="eb-client-name">Kibouka Grace</div>
+          <div class="eb-client-location">+242 05 987 6543</div>
+        </div>
+      </div>
+    </td>
+    <td>Brazzaville</td>
+    <td><span class="eb-breed-badge brahma">Brahma</span></td>
+    <td><span class="eb-weight-600">120 sujets</span></td>
+    <td class="eb-text-right">
+      <button class="eb-btn-edit btn-trigger-edit-client" style="margin-right: 8px;"><i class="fa-solid fa-pen-to-square"></i></button>
+      <button class="eb-btn-delete-row" onclick="deleteClientRow(this)"><i class="fa-solid fa-trash-can"></i></button>
+    </td>
+  </tr>
+</tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="eb-modal-overlay" id="modal-client-pro">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Fiche Nouvel Éleveur</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-client-pro')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="form-client-pro">
+      <div class="eb-form-group">
+        <label>Nom complet de l'éleveur</label>
+        <input type="text" id="cli-nom" required placeholder="Ex: Loubaki Pierre">
+      </div>
+      <div class="eb-form-group">
+        <label>Téléphone WhatsApp</label>
+        <input type="text" id="cli-tel" required placeholder="Ex: +242 06 555 1122">
+      </div>
+      <div class="eb-form-group">
+        <label>Ville / Zone d'exploitation</label>
+        <input type="text" id="cli-ville" required placeholder="Ex: Oyo">
+      </div>
+      <div class="eb-form-row-grid">
+        <div class="eb-form-group">
+          <label>Race Principale</label>
+          <div class="eb-select-wrapper">
+            <select id="cli-race" required>
+              <option value="Goliath">Goliath</option>
+              <option value="Brahma">Brahma</option>
+              <option value="Mixte">Mixte (Goliath / Brahma)</option>
+            </select>
+          </div>
+        </div>
+        <div class="eb-form-group">
+          <label>Estimation Cheptel</label>
+          <input type="number" id="cli-cheptel" required placeholder="Ex: 150">
+        </div>
+      </div>
+      <button type="submit" class="eb-btn-submit">Enregistrer dans la base</button>
+    </form>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-client-edit">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Modifier la Fiche Éleveur</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-client-edit')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="form-client-edit">
+      <div class="eb-form-group">
+        <label>Nom complet de l'éleveur</label>
+        <input type="text" id="edit-cli-nom" required>
+      </div>
+      <div class="eb-form-group">
+        <label>Téléphone WhatsApp</label>
+        <input type="text" id="edit-cli-tel" required>
+      </div>
+      <div class="eb-form-group">
+        <label>Ville / Zone d'exploitation</label>
+        <input type="text" id="edit-cli-ville" required>
+      </div>
+      <div class="eb-form-row-grid">
+        <div class="eb-form-group">
+          <label>Race Principale</label>
+          <div class="eb-select-wrapper">
+            <select id="edit-cli-race" required>
+              <option value="Goliath">Goliath</option>
+              <option value="Brahma">Brahma</option>
+              <option value="Mixte">Mixte (Goliath / Brahma)</option>
+            </select>
+          </div>
+        </div>
+        <div class="eb-form-group">
+          <label>Estimation Cheptel</label>
+          <input type="number" id="edit-cli-cheptel" required>
+        </div>
+      </div>
+      <button type="submit" class="eb-btn-submit">Sauvegarder les modifications</button>
+    </form>
+  </div>
+</div>
+
+      <section id="commandes" class="dashboard-section">
+  
+  <div class="eb-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+    <div class="eb-stat-card" style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e5e7eb;">
+      <div style="font-size: 12px; color: #6b7280; font-weight: 600; text-transform: uppercase;">Commandes Actives</div>
+      <div style="font-size: 24px; font-weight: 700; color: #308225; margin: 8px 0;">12 En attente</div>
+      <div style="font-size: 12px; color: #10b981;"><i class="fa-solid fa-arrow-trend-up"></i> Suivi en temps réel</div>
+    </div>
+    <div class="eb-stat-card" style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e5e7eb;">
+      <div style="font-size: 12px; color: #6b7280; font-weight: 600; text-transform: uppercase;">Incubateur Alpha (Goliath)</div>
+      <div style="font-size: 24px; font-weight: 700; color: #111827; margin: 8px 0;">85% Rempli</div>
+      <div style="font-size: 12px; color: #b45309;"><i class="fa-solid fa-hourglass-half"></i> Cycle de 21 jours</div>
+    </div>
+  </div>
+
+  <div class="eb-table-card" style="margin-bottom: 30px; background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; padding: 16px;">
+    <div class="eb-table-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div>
+        <h3 style="margin: 0; font-size: 18px; color: #111827;">Carnet des Commandes Clients</h3>
+        <p style="margin: 4px 0 0 0; font-size: 13px; color: #6b7280;">Réservations de poussins et acomptes.</p>
+      </div>
+      <button type="button" class="eb-btn-add" id="btn-trigger-modal-commande" style="background-color: #f9932f; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+        <i class="fa-solid fa-cart-plus"></i> Nouvelle Commande
+      </button>
+    </div>
+
+    <div class="eb-responsive-table" style="overflow-x: auto;">
+      <table class="eb-dashboard-table" id="table-commandes-formal" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 1px solid #e5e7eb; color: #374151; font-size: 13px;">
+            <th style="padding: 12px;">Client</th>
+            <th style="padding: 12px;">Produit / Race</th>
+            <th style="padding: 12px;">Quantité</th>
+            <th style="padding: 12px;">Acompte / Total</th>
+            <th style="padding: 12px;">Statut</th>
+            <th style="padding: 12px; text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #f3f4f6; font-size: 14px;">
+            <td style="padding: 12px;"><span style="font-weight: 600;">Madingou Brice</span></td>
+            <td style="padding: 12px;"><span class="eb-breed-badge goliath">Poussins Goliath</span></td>
+            <td style="padding: 12px;"><span style="font-weight: 600;">350 sujets</span></td>
+            <td style="padding: 12px;"><span style="color:#308225; font-weight:600;">Acompte versé</span></td>
+            <td style="padding: 12px;"><span class="eb-status-badge warning">Réservé</span></td>
+            <td style="padding: 12px; text-align: right;">
+              <button class="eb-btn-delete-row" onclick="deleteRowDirect(this)" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="eb-table-card" style="background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; padding: 16px;">
+    <div class="eb-table-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div>
+        <h3 style="margin: 0; font-size: 18px; color: #111827;">Lots en Incubation Artificielle</h3>
+        <p style="margin: 4px 0 0 0; font-size: 13px; color: #6b7280;">Suivi technique du couvoir.</p>
+      </div>
+      <button type="button" class="eb-btn-add" id="btn-trigger-modal-incubation" style="background-color: #308225; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+        <i class="fa-solid fa-egg"></i> Mettre en Couveuse
+      </button>
+    </div>
+
+    <div class="eb-responsive-table" style="overflow-x: auto;">
+      <table class="eb-dashboard-table" id="table-incubations-formal" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 1px solid #e5e7eb; color: #374151; font-size: 13px;">
+            <th style="padding: 12px;">Code Lot</th>
+            <th style="padding: 12px;">Type d'œufs</th>
+            <th style="padding: 12px;">Capacité</th>
+            <th style="padding: 12px;">Date Lancement</th>
+            <th style="padding: 12px;">Statut</th>
+            <th style="padding: 12px; text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #f3f4f6; font-size: 14px;">
+            <td style="padding: 12px;"><span style="font-weight: 600;">LOT-GOL-001</span></td>
+            <td style="padding: 12px;"><span class="eb-breed-badge goliath">Goliath</span></td>
+            <td style="padding: 12px;"><span style="font-weight: 600;">200 œufs</span></td>
+            <td style="padding: 12px;">18 Mai 2026</td>
+            <td style="padding: 12px;"><span class="eb-status-badge warning">En cours</span></td>
+            <td style="padding: 12px; text-align: right;">
+              <button class="eb-btn-delete-row" onclick="deleteRowDirect(this)" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="eb-modal-overlay" id="modal-commande-add">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Enregistrer une Nouvelle Commande</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-commande-add')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="form-commande-add">
+      <div class="eb-form-group">
+        <label>Nom de l'éleveur / client</label>
+        <input type="text" id="cmd-client" required placeholder="Ex: Loubaki Pierre">
+      </div>
+      <div class="eb-form-group" style="margin-top: 12px;">
+        <label>Type de produit / Race</label>
+        <select id="cmd-type" required style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #d1d5db;">
+          <option value="Poussins Goliath">Poussins Goliath</option>
+          <option value="Poussins Brahma">Poussins Brahma</option>
+          <option value="Œufs Fécondés">Œufs Fécondés</option>
+        </select>
+      </div>
+      <div class="eb-form-group" style="margin-top: 12px;">
+        <label>Quantité</label>
+        <input type="number" id="cmd-qty" required placeholder="Ex: 100">
+      </div>
+      <button type="submit" class="eb-btn-submit" style="margin-top: 20px; background-color: #f9932f;">Valider la commande</button>
+    </form>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-commande-add">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Enregistrer une Commande</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-commande-add')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="form-commande-add">
+      <div class="eb-form-group">
+        <label>Nom du client éleveur</label>
+        <input type="text" id="cmd-client" required placeholder="Ex: Loubaki Pierre">
+      </div>
+      <div class="eb-form-row-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div class="eb-form-group">
+          <label>Type de produit</label>
+          <select id="cmd-type" required style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #d1d5db;">
+            <option value="Poussins Goliath">Poussins Goliath</option>
+            <option value="Poussins Brahma">Poussins Brahma</option>
+            <option value="Œufs Fécondés">Œufs Fécondés</option>
+          </select>
+        </div>
+        <div class="eb-form-group">
+          <label>Quantité commandée</label>
+          <input type="number" id="cmd-qty" required placeholder="Ex: 100">
+        </div>
+      </div>
+      <button type="submit" class="eb-btn-submit" style="margin-top: 20px; background-color: #f9932f;">Valider la commande</button>
+    </form>
+  </div>
+</div>
+
+        <section id="devis-factures" class="dashboard-section">
+  
+  <div class="eb-invoice-dashboard-view">
+    <div class="eb-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px;">
+      <div class="eb-stat-card" style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e5e7eb;">
+        <div style="font-size: 12px; color: #6b7280; font-weight: 600; text-transform: uppercase;">Chiffre d'Affaires Encaissé</div>
+        <div style="font-size: 24px; font-weight: 700; color: #308225; margin: 8px 0;">2 450 000 FCFA</div>
+        <div style="font-size: 12px; color: #10b981;"><i class="fa-solid fa-circle-check"></i> Suivi des encaissements</div>
+      </div>
+      <div class="eb-stat-card" style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e5e7eb;">
+        <div style="font-size: 12px; color: #6b7280; font-weight: 600; text-transform: uppercase;">Créances / Restes à payer</div>
+        <div style="font-size: 24px; font-weight: 700; color: #b91c1c; margin: 8px 0;">450 000 FCFA</div>
+        <div style="font-size: 12px; color: #d97706;"><i class="fa-solid fa-clock"></i> Reste à recouvrer</div>
+      </div>
+    </div>
+
+    <div class="eb-table-card" style="background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; padding: 16px; margin-bottom: 20px;">
+      <div class="eb-table-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div>
+          <h3 style="margin: 0; font-size: 18px; color: #111827;">Registre Financier</h3>
+          <p style="margin: 4px 0 0 0; font-size: 13px; color: #6b7280;">Factures et Devis émis pour la clientèle.</p>
+        </div>
+        <button type="button" class="eb-btn-add" id="btn-trigger-modal-facture" style="background-color: #308225; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+          <i class="fa-solid fa-file-invoice-dollar"></i> Créer une Pièce (Devis/Facture)
+        </button>
+      </div>
+
+      <div class="eb-responsive-table">
+        <table class="eb-dashboard-table" id="table-factures-formal" style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 1px solid #e5e7eb; color: #374151; font-size: 13px; text-align: left;">
+              <th style="padding: 12px;">Numéro / Réf</th>
+              <th style="padding: 12px;">Type</th>
+              <th style="padding: 12px;">Client</th>
+              <th style="padding: 12px;">Montant Total</th>
+              <th style="padding: 12px;">Statut</th>
+              <th style="padding: 12px; text-align: right;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="eb-printable-invoice-sheet" class="eb-printable-invoice-sheet" style="display: none;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;" class="no-print">
+      <button type="button" onclick="closeInvoicePreview()" style="background: #4b5563; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;"><i class="fa-solid fa-arrow-left"></i> Retour au Registre</button>
+      <button type="button" onclick="window.print()" style="background: #308225; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;"><i class="fa-solid fa-print"></i> Lancer l'Impression / PDF</button>
+    </div>
+
+    <div class="invoice-box-frame">
+      <table cellpadding="0" cellspacing="0" style="width: 100%; line-height: 22px; font-family: Arial, sans-serif; color: #333;">
+        <tr class="top">
+          <td colspan="4" style="padding-bottom: 20px;">
+            <table style="width: 100%;">
+              <tr>
+                <td style="font-size: 28px; line-height: 28px; color: #308225; font-weight: bold;">
+                  ELEVA-BIO<br>
+                  <span style="font-size: 12px; color: #6b7280; font-weight: normal;">Ferme Avicole • Poussins Goliath & Brahma</span>
+                </td>
+                <td style="text-align: right; font-size: 20px; font-weight: bold; color: #111827;" id="print-document-title">
+                  FACTURE
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+        <tr class="information">
+          <td colspan="4" style="padding-bottom: 30px;">
+            <table style="width: 100%;">
+              <tr>
+                <td>
+                  <strong>Émetteur :</strong><br>
+                  ElevaBio République du Congo<br>
+                  Brazzaville / Pointe-Noire<br>
+                  contact@elevabio.com
+                </td>
+                <td style="text-align: right;">
+                  <strong>Adressé à :</strong><br>
+                  <span id="print-client-name">-</span><br>
+                  Date : <span id="print-date-today">-</span><br>
+                  N° Pièce : <span id="print-document-number" style="font-weight: bold; color: #308225;">-</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+        <tr class="heading" style="background: #f3f4f6; font-weight: bold; border-bottom: 2px solid #e5e7eb;">
+          <td style="padding: 10px; width: 45%;">Désignation des Articles / Prestations</td>
+          <td style="padding: 10px; text-align: center; width: 15%;">Quantité</td>
+          <td style="padding: 10px; text-align: right; width: 20%;">Prix Unitaire (FCFA)</td>
+          <td style="padding: 10px; text-align: right; width: 20%;">Total Net (FCFA)</td>
+        </tr>
+        
+        <tbody id="print-invoice-items-body">
+          </tbody>
+        
+        <tr><td colspan="4" style="height: 30px;"></td></tr>
+        
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="2" style="text-align: right;">
+            <table style="width: 100%; border-top: 2px solid #308225; padding-top: 10px;">
+              <tr>
+                <td style="text-align: left; font-weight: bold; padding: 6px 0;">Montant Total H.T :</td>
+                <td style="font-weight: 600;" id="print-total-ht">0 FCFA</td>
+              </tr>
+              <tr>
+                <td style="text-align: left; padding: 6px 0; color: #6b7280;">TVA (0%) :</td>
+                <td style="color: #6b7280;">0 FCFA</td>
+              </tr>
+              <tr style="font-size: 16px; font-weight: bold; color: #308225;">
+                <td style="text-align: left; padding: 10px 0;">NET À PAYER (TTC) :</td>
+                <td id="print-total-ttc">0 FCFA</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <div style="margin-top: 80px; text-align: center; font-size: 11px; color: #9ca3af; border-top: 1px dashed #e5e7eb; padding-top: 20px;">
+        ElevaBio - Système de Gestion Automatisé • Merci pour votre confiance !
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="eb-modal-overlay" id="modal-facture-add">
+  <div class="eb-modal-card" style="max-width: 650px; width: 90%;">
+    <div class="eb-modal-header">
+      <h3>Générer un Document (Multi-lignes)</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-facture-add')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="form-facture-add">
+      <div class="eb-form-group">
+        <label>Nom du Client</label>
+        <input type="text" id="fac-client" required placeholder="Ex: Madingou Brice">
+      </div>
+      
+      <div class="eb-form-group" style="margin-top: 12px;">
+        <label>Type de Document</label>
+        <select id="fac-type" required style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #d1d5db;">
+          <option value="Facture">Facture Officielle</option>
+          <option value="Devis">Devis Estimatif</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 16px; border-top: 1px solid #e5e7eb; padding-top: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <strong style="font-size: 14px; color: #374151;">Articles / Prestations</strong>
+          <button type="button" class="btn btn-dark" id="btn-add-item-row">
+            <i class="fa-solid fa-plus"></i> Ajouter un article
+          </button>
+        </div>
+        
+        <div id="invoice-items-container">
+          <div class="eb-form-group">
+            <input type="text" class="item-desc" required placeholder="Désignation (ex: Poussins Goliath)">
+            <input type="number" class="item-qty" required min="1" value="100" placeholder="Qté">
+            <input type="number" class="item-price" required min="0" value="1500" placeholder="P.U (FCFA)">
+            <button type="button" class="btn-remove-item" onclick="this.parentElement.remove()" style="background: none; border: none; color: #ef4444; cursor: pointer; font-size: 16px;"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="eb-btn-submit" style="margin-top: 20px; background-color: #308225;">Enregistrer dans le Registre</button>
+    </form>
+  </div>
+</div>
+      
+    
+     
+    <section id="formations" class="dashboard-section">
+  <div class="eb-table-card">
+    <div class="eb-table-card-header">
+      <h3>Suivi des Formations Avicoles</h3>
+      <p>Gestion des sessions et des participants.</p>
+    </div>
+    <table class="eb-dashboard-table">
+      <thead>
+        <tr>
+          <th>Module</th>
+          <th>Date</th>
+          <th>Participants</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Techniques d'incubation</td>
+          <td>25 Mai 2026</td>
+          <td>12</td>
+          <td><span class="eb-status-badge paid">Terminé</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+      <section id="utilisateurs" class="dashboard-section">
+  
+  <div class="eb-table-card">
+    <div class="eb-table-card-header">
+      <div>
+        <h3>Contrôle d'Accès de l'Équipe</h3>
+        <p class="eb-section-subtitle">Gérez les comptes, les rôles et les permissions des employés de la ferme.</p>
+      </div>
+      <button type="button" class="eb-btn-add" id="btn-add-user">
+        <i class="fa-solid fa-user-plus"></i> Ajouter un membre
+      </button>
+    </div>
+
+    <div class="eb-responsive-table">
+      <table class="eb-dashboard-table" id="table-users">
+        <thead>
+          <tr>
+            <th>Membre / Matricule</th>
+            <th>Rôle / Fonction</th>
+            <th>Statut du compte</th>
+            <th>Dernière connexion</th>
+            <th class="eb-text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="eb-client-cell">
+                <div class="eb-client-avatar user-av-color-1">AN</div>
+                <div>
+                  <div class="eb-client-name">B. Ninon</div>
+                  <div class="eb-client-location">Matricule: EB-2026-001</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="eb-role-badge badge-admin"><i class="fa-solid fa-user-shield"></i> Super Admin</span></td>
+            <td><span class="eb-status-badge success">Actif</span></td>
+            <td>En ligne</td>
+            <td class="eb-text-right">
+              <button class="eb-btn-edit btn-trigger-user-edit" data-id="1"><i class="fa-solid fa-sliders"></i> Droits</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="eb-client-cell">
+                <div class="eb-client-avatar user-av-color-2">OK</div>
+                <div>
+                  <div class="eb-client-name">Dr. Okombi Jean</div>
+                  <div class="eb-client-location">Matricule: EB-2026-014</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="eb-role-badge badge-veto"><i class="fa-solid fa-stethoscope"></i> Vétérinaire Conseil</span></td>
+            <td><span class="eb-status-badge success">Actif</span></td>
+            <td>Hier à 16:42</td>
+            <td class="eb-text-right">
+              <button class="eb-btn-edit btn-trigger-user-edit" data-id="2"><i class="fa-solid fa-sliders"></i> Droits</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="eb-client-cell">
+                <div class="eb-client-avatar user-av-color-3">LM</div>
+                <div>
+                  <div class="eb-client-name">Loubaki Marie</div>
+                  <div class="eb-client-location">Matricule: EB-2026-009</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="eb-role-badge badge-manager"><i class="fa-solid fa-warehouse"></i> Gestionnaire Couvoir</span></td>
+            <td><span class="eb-status-badge warning">Suspendu</span></td>
+            <td>Il y a 3 jours</td>
+            <td class="eb-text-right">
+              <button class="eb-btn-edit btn-trigger-user-edit" data-id="3"><i class="fa-solid fa-sliders"></i> Droits</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="eb-modal-overlay" id="modal-user">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Ajouter un collaborateur</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-user')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="form-nouveau-user">
+      <div class="eb-form-group">
+        <label>Nom et Prénom</label>
+        <input type="text" id="add-user-nom" required placeholder="Ex: Mavoungou Paul">
+      </div>
+      <div class="eb-form-group">
+        <label>Matricule Unique</label>
+        <input type="text" id="add-user-matricule" required placeholder="Ex: EB-2026-022">
+      </div>
+      <div class="eb-form-group">
+        <label>Rôle et Droits d'accès</label>
+        <div class="eb-select-wrapper">
+          <select id="add-user-role" required>
+            <option value="" disabled selected hidden>Sélectionnez un rôle...</option>
+            <option value="Vétérinaire Conseil">Vétérinaire Conseil</option>
+            <option value="Gestionnaire Couvoir">Gestionnaire Couvoir</option>
+            <option value="Admin">Administrateur</option>
+          </select>
+        </div>
+      </div>
+      <div class="eb-form-group">
+        <label>Mot de passe initial</label>
+        <input type="password" id="add-user-password" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="eb-btn-submit">Créer le compte utilisateur</button>
+    </form>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-droits">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <div>
+        <h3 style="margin: 0;">Ajuster les Habilitations</h3>
+        <p id="edit-droits-subtitle" style="font-size: 12px; color: var(--eb-gray-muted, #6b7280); margin: 4px 0 0 0;"></p>
+      </div>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-droits')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    
+    <form id="form-gestion-droits">
+      <input type="hidden" id="edit-droits-matricule">
+
+      <div class="eb-droits-list">
+        <div class="eb-droit-item">
+          <div class="eb-droit-info">
+            <span class="eb-droit-name">Lecture (Voir les données)</span>
+            <span class="eb-droit-desc">Autorise la consultation des rapports et tableaux.</span>
+          </div>
+          <label class="eb-switch">
+            <input type="checkbox" id="perm-read" checked>
+            <span class="eb-slider"></span>
+          </label>
+        </div>
+
+        <div class="eb-droit-item">
+          <div class="eb-droit-info">
+            <span class="eb-droit-name">Écriture (Ajouter / Modifier)</span>
+            <span class="eb-droit-desc">Autorise l'ajout d'entrées et les modifications.</span>
+          </div>
+          <label class="eb-switch">
+            <input type="checkbox" id="perm-write">
+            <span class="eb-slider"></span>
+          </label>
+        </div>
+
+        <div class="eb-droit-item">
+          <div class="eb-droit-info">
+            <span class="eb-droit-name">Suppression critique</span>
+            <span class="eb-droit-desc">Permet de détruire un enregistrement ou un profil.</span>
+          </div>
+          <label class="eb-switch">
+            <input type="checkbox" id="perm-delete">
+            <span class="eb-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="eb-btn-submit" style="margin-top: 20px;">Appliquer les modifications</button>
+    </form>
+  </div>
+</div>
+</section>
+      
+<section id="configuration" class="dashboard-section">
+  <div class="eb-table-card">
+    
+    <h2 style="margin-bottom: 20px;">Paramètres Généraux</h2>
+  
+  <div class="eb-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    
+    <div class="eb-table-card" style="padding: 20px;">
+      <h3><i class="fa-solid fa-building"></i> Identité de la Ferme</h3>
+      <form id="form-settings-identity" style="margin-top: 15px;">
+        <div class="eb-form-group">
+          <label>Nom de l'entreprise</label>
+          <input type="text" value="ELEVA-BIO">
+        </div>
+        <div class="eb-form-group">
+          <label>Adresse complète</label>
+          <input type="text" placeholder="Brazzaville, Congo">
+        </div>
+        <button type="button" class="eb-btn-submit" style="margin-top: 10px;">Enregistrer</button>
+      </form>
+    </div>
+
+    <div class="eb-table-card" style="padding: 20px;">
+      <h3><i class="fa-solid fa-calculator"></i> Paramètres Facturation</h3>
+      <div class="eb-form-group">
+        <label>Devise par défaut</label>
+        <select>
+          <option>FCFA (Franc CFA)</option>
+          <option>EUR (€)</option>
+        </select>
+      </div>
+      <div class="eb-form-group">
+        <label>TVA par défaut (%)</label>
+        <input type="number" value="0">
+      </div>
+      <button type="button" class="eb-btn-submit" style="margin-top: 10px;">Mettre à jour</button>
+    </div>
+
+  </div>
+    </div>
+</section>
+
+    </main>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-demande">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Nouvelle demande</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-demande')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="form-nouvelle-demande">
+      <div class="eb-form-group">
+        <label>Nom du Client</label>
+        <input type="text" id="add-demande-nom" required placeholder="Ex: Okombi Jean">
+      </div>
+      <div class="eb-form-group">
+        <label>Ville</label>
+        <input type="text" id="add-demande-ville" required placeholder="Ex: Brazzaville">
+      </div>
+      <div class="eb-form-group">
+        <label>Prestation / Produit</label>
+        <input type="text" id="add-demande-produit" required placeholder="Ex: 50 Poussins Brahma">
+      </div>
+      <div class="eb-form-group">
+        <label>Montant (FCFA)</label>
+        <input type="text" id="add-demande-montant" required placeholder="Ex: 120 000 FCFA">
+      </div>
+      <div class="eb-form-group">
+        <label>Statut initial</label>
+        <select id="add-demande-statut">
+          <option value="En attente">En attente</option>
+          <option value="Livré">Livré</option>
+        </select>
+      </div>
+      <button type="submit" class="eb-btn-submit">Enregistrer la demande</button>
+    </form>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-client">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Enregistrer un éleveur</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-client')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="form-nouveau-client">
+      <div class="eb-form-group">
+        <label>Nom et Prénom</label>
+        <input type="text" id="add-client-nom" required placeholder="Ex: Loubaki Pierre">
+      </div>
+      <div class="eb-form-group">
+        <label>Localisation / Ville</label>
+        <input type="text" id="add-client-ville" required placeholder="Ex: Oyo">
+      </div>
+      <div class="eb-form-group">
+        <label>Téléphone de contact</label>
+        <input type="text" id="add-client-tel" required placeholder="Ex: +242 06 444 5566">
+      </div>
+      <div class="eb-form-group">
+        <label>Spécialisation d'élevage</label>
+        <input type="text" id="add-client-type" required placeholder="Ex: Reproducteurs Goliath">
+      </div>
+      <button type="submit" class="eb-btn-submit">Créer la fiche client</button>
+    </form>
+  </div>
+</div>
+
+<div class="eb-modal-overlay" id="modal-modifier">
+  <div class="eb-modal-card">
+    <div class="eb-modal-header">
+      <h3>Modifier l'enregistrement</h3>
+      <button type="button" class="eb-modal-close" onclick="closeModal('modal-modifier')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="form-modifier-demande">
+      <div class="eb-form-group">
+        <label>Prestation / Produit</label>
+        <input type="text" id="edit-demande-produit" required>
+      </div>
+      <div class="eb-form-group">
+        <label>Montant</label>
+        <input type="text" id="edit-demande-montant" required>
+      </div>
+      <div class="eb-form-group">
+        <label>Changer le Statut</label>
+        <select id="edit-demande-statut">
+          <option value="Livré">Livré</option>
+          <option value="En attente">En attente</option>
+        </select>
+      </div>
+      <button type="submit" class="eb-btn-submit">Sauvegarder les modifications</button>
+    </form>
+  </div>
+</div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+>>>>>>> origin/main
 </html>

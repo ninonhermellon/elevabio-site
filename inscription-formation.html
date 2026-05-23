@@ -21,6 +21,7 @@
         <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css"> 
   <link rel="stylesheet" href="css/multi-step-form.css">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
@@ -28,6 +29,40 @@
 </head>
 <body>
 
+    <header class="site-header site-header--solid" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="52" height="52">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html" class="active" data-nav="index"><i class="fa-solid fa-house"></i>Accueil</a>
+          <a href="races.html" class="active" data-nav="races"><i class="fa-solid fa-layer-group"></i>Nos Races</a>
+          <a href="commande.html" class="active" data-nav="commande"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+          <a href="formation.html" class="active" data-nav="formation"><i class="fa-solid fa-graduation-cap"></i>Formation</a>
+          <a href="faq.html" class="active" data-nav="faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-phone"></i>Contact</a>
+          <a href="apropos.html" class="active" data-nav="apropos"> <i class="fa-solid fa-circle-info"></i>A Propos</a>
+        </nav>
+        <div class="header-actions">
+          <a style="color: white;" href="form.html" class="btn btn-lime">
+            <i class="fa-solid fa-user"></i>
+            Espace Compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
   <main class="form-main-container">
     <div class="form-card">
       <div class="form-header">
@@ -197,5 +232,7 @@
   </main>
 
   <script src="js/multi-step-form.js"></script>
+  <script src="js/all.min.js"></script>
+
 </body>
 </html>
