@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevaBio | FAQ</title>
+  <!-- En-têtes de sécurité (miroir .htaccess — defense in depth) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <script src="js/security.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body data-page="faq">
+
+  <header class="site-header site-header--solid" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="52" height="52">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html" class="active" data-nav="index"><i class="fa-solid fa-house"></i>Accueil</a>
+          <a href="races.html" class="active" data-nav="races"><i class="fa-solid fa-layer-group"></i>Nos Races</a>
+          <a href="commande.html" class="active" data-nav="commande"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+          <a href="formation.html" class="active" data-nav="formation"><i class="fa-solid fa-graduation-cap"></i>Formation</a>
+          <a href="faq.html" class="active" data-nav="faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-phone"></i>Contact</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-circle-info"></i>Info</a>
+        </nav>
+        <div class="header-actions">
+          <a style="color: white;" href="form.html" class="btn btn-lime">
+            <i class="fa-solid fa-user"></i>
+            Espace Compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero" style="margin-top:24px">
+    <span style="color: #ffffff" class="eyebrow">Foire Aux Questions</span>
+    <h1>Questions fréquentes</h1>
+    <p>Tout ce qu'il faut savoir sur l'élevage Goliath et Brahma, la biosécurité, nos délais de commande et nos formations.</p>
+  </section>
+
+  <section class="inner-page">
+    <div class="container">
+      <div class="faq-filters" id="faq-filters">
+        <button type="button" class="faq-filter active" data-filter="all">Tous</button>
+        <button type="button" class="faq-filter" data-filter="elevage">Élevage</button>
+        <button type="button" class="faq-filter" data-filter="biosecurite">Biosécurité</button>
+        <button type="button" class="faq-filter" data-filter="commandes">Commandes</button>
+        <button type="button" class="faq-filter" data-filter="formations">Formations</button>
+      </div>
+
+      <div class="why-section">
+        <div class="faq-group" data-category="elevage">
+          <h2>Élevage Goliath et Brahma</h2>
+          <div class="accordion" id="accordion-elevage">
+            <div class="accordion-item active faq-item" data-cat="elevage">
+              <button class="accordion-trigger" type="button">Quelles sont les particularités de la race Goliath ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Le Goliath est la plus grande race de poule au monde, originaire du Benin. Coq jusqu'à 7 kg, excellente production de viande, rusticité remarquable et adaptation au climat tropical congolais. Ponte de 80 à 120 œufs/an.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="elevage">
+              <button class="accordion-trigger" type="button">Et la race Brahma, quels avantages ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Le Brahma est docil, majestueux, avec pattes emplumées. Poids 5-6 kg, ponte régulière même en saison fraîche. Idéal pour reproduction, ornement et élevage familial.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="elevage">
+              <button class="accordion-trigger" type="button">Quelle alimentation conseillez-vous ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Aliment complet adapté à chaque stade (démarrage, croissance, ponte). Eau propre en permanence, compléments calciques pour les pondeuses. Nos formations détaillent les rations optimales Goliath et Brahma.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="elevage">
+              <button class="accordion-trigger" type="button">À quel âge commencent les pontes ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>En général entre 6 et 8 mois selon la race, l'alimentation et les conditions d'élevage. La Brahma peut pondre plus régulièrement en saison fraîche que d'autres races.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-category="biosecurite">
+          <h2>Biosécurité</h2>
+          <div class="accordion" id="accordion-bio">
+            <div class="accordion-item faq-item" data-cat="biosecurite">
+              <button class="accordion-trigger" type="button">Comment prévenir les maladies dans mon élevage ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Isolement des nouveaux sujets, désinfection régulière, eau et litière propres, limitation des visiteurs. Vaccination selon protocole adapté au Congo.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="biosecurite">
+              <button class="accordion-trigger" type="button">Quels vaccins sont indispensables au Congo ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Nos poussins sont vaccinés selon les maladies courantes locales. Nous vous fournissons un calendrier vaccinal et des conseils à l'achat.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="biosecurite">
+              <button class="accordion-trigger" type="button">Que faire en cas de mortalité suspecte ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Isolez immédiatement les sujets malades, contactez un vétérinaire et notre équipe. Ne déplacez pas d'animaux sains sans désinfection préalable.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="biosecurite">
+              <button class="accordion-trigger" type="button">Comment désinfecter le poulailler ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Nettoyage complet entre chaque bande, produits désinfectants adaptés, séchage, litière neuve. Module dédié dans nos formations.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-category="commandes">
+          <h2>Commandes et Délais</h2>
+          <div class="accordion" id="accordion-cmd">
+            <div class="accordion-item faq-item" data-cat="commandes">
+              <button class="accordion-trigger" type="button">Quels sont les délais de livraison ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Les délais varient selon le produit et la disponibilité. Nous confirmons par WhatsApp après réception de votre commande, généralement sous 24 à 48 h.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="commandes">
+              <button class="accordion-trigger" type="button">Comment passer commande ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Remplissez le formulaire sur la page Commander ou écrivez-nous sur WhatsApp au +242 06 817 25 03. Aucune donnée stockée sur le site.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="commandes">
+              <button class="accordion-trigger" type="button">Livrez-vous en dehors de Pointe-Noire ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Oui, selon les zones et le type de produit. Contactez-nous pour organiser la livraison ou le retrait.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="commandes">
+              <button class="accordion-trigger" type="button">Un acompte est-il demandé ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Les modalités de paiement vous sont précisées par WhatsApp selon votre commande (œufs, poussins, reproducteurs ou formation).</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-category="formations">
+          <h2>Formations</h2>
+          <div class="accordion" id="accordion-form">
+            <div class="accordion-item faq-item" data-cat="formations">
+              <button class="accordion-trigger" type="button">Qui peut suivre vos formations ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Débutants comme aviculteurs confirmés souhaitant se spécialiser sur Goliath et Brahma.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="formations">
+              <button class="accordion-trigger" type="button">Quelle est la durée et le contenu ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Modules pratiques : démarrage, nutrition Goliath, reproduction Brahma, biosécurité, gestion économique. Durée communiquée à l'inscription.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="formations">
+              <button class="accordion-trigger" type="button">Quel est le coût d'une formation ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Le tarif dépend du module choisi. Demandez un devis via le formulaire de commande (produit : Formation) ou WhatsApp.</p></div></div>
+            </div>
+            <div class="accordion-item faq-item" data-cat="formations">
+              <button class="accordion-trigger" type="button">Proposez-vous un suivi après formation ?<span class="icon">+</span></button>
+              <div class="accordion-panel"><div class="accordion-panel-inner"><p>Oui, conseils et accompagnement par WhatsApp pour vous aider à appliquer ce que vous avez appris sur site.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-banner">
+        <h1 style="color: white;">Une autre question ?</h1>
+        <p style="color: white;">Écrivez-nous directement, nous répondons sous 24H.</p>
+        <a href="contact.html" class="btn btn-eleva" style="margin-right:12px"><i class="fa-brands fa-whatsapp"></i>Contactez-Nous</a>
+        <a style="color: #ffffff;" href="commande.html" class="btn btn-lime"><i class="fa-solid fa-bag-shopping"></i>Passer commande</a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo">
+        <div class="logo-text">
+          <span class="logo" style="color: #ffffff">ElevaBio</span>
+        </div>
+      </a>
+        <p>Ferme avicole spécialiste des races Goliath et Brahma à Pointe-Noire.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="races.html">Nos Races</a></li>
+          <li><a href="commande.html">Commander</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Espace Compte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Produits et Services</h5>
+        <ul>
+          <li><a href="commande.html">Œufs fertiles</a></li>
+          <li><a href="commande.html">Poussins</a></li>
+          <li><a href="commande.html">Reproducteurs</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Contact</h5>
+        <ul>
+          <li><a href="tel:+242068172503">+242 06 817 25 03</a></li>
+          <li><a href="tel:+242056712241">+242 05 671 22 41</a></li>
+          <li><a href="contact.html">Adresse & Réseaux</a></li>
+          <li><a href="https://wa.me/242068172503" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Ngoyo Japon, Pointe-Noire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-wordmark">
+      <p class="footer-wordmark-text" aria-hidden="true">ElevaBio</p>
+      <a href="commande.html" class="btn btn-lime shop-embed"><i class="fa-solid fa-bag-shopping"></i>Passer commande</a>
+    </div>
+  </footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+</html>

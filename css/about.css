@@ -1,0 +1,377 @@
+/* --- COMPOSANTS DE LA PAGE À PROPOS --- */
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #fafafa;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.about-hero-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--dark-text);
+  margin-top: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.02em;
+}
+
+.about-hero-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grille Histoire */
+.about-story-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.story-text, .story-image {
+  flex: 1;
+  width: 50%;
+}
+
+.story-text h2 {
+  font-size: 28px;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.image-rounded {
+  border-radius: var(--radius-md, 20px);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Compteurs de Statistiques */
+.stats-counter-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 30px;
+}
+
+.stat-counter-item .stat-number {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary-green);
+  display: block;
+}
+
+.stat-counter-item .stat-desc {
+  font-size: 15px;
+  color: var(--dark-text);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Grille des Valeurs */
+.values-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.value-card {
+  flex: 1;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--radius-sm, 14px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.02);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* --- RESPONSIVE WORKFLOW --- */
+@media (max-width: 768px) {
+  .about-hero-title { font-size: 28px; }
+  .about-story-grid { flex-direction: column; gap: 30px; }
+  .story-text, .story-image { width: 100%; }
+  .stats-counter-grid { flex-direction: column; gap: 25px; }
+  .values-grid { flex-direction: column; gap: 20px; }
+}
+
+/* --- SECTION ÉQUIPE --- */
+.team-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-card {
+  flex: 1;
+  background-color: var(--white);
+  border-radius: var(--radius-md, 20px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--cream);
+}
+
+.team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.team-info h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-text);
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.team-bio {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- BLOCK NEWSLETTER HORIZONTAL --- */
+.newsletter-box {
+  background: var(--gradient-nature, linear-gradient(to right, #308225, #5CB82C));
+  border-radius: var(--radius-md, 20px);
+  padding: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.newsletter-content {
+  flex: 1.2;
+}
+
+.newsletter-content h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.newsletter-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.newsletter-form-wrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.newsletter-input-group {
+  display: flex;
+  background-color: white;
+  padding: 6px;
+  border-radius: var(--radius-sm, 14px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-input-group input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  color: var(--dark-text);
+}
+
+.btn-news {
+  background-color: var(--secondary-orange, #f9932f);
+  color: white;
+  border: none;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: calc(var(--radius-sm) - 4px);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-news:hover {
+  background-color: #e07f24;
+}
+
+.newsletter-privacy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+/* --- CONFIGURATION EXACTE DE LA MODAL DE CONFIRMATION --- */
+.newsletter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.newsletter-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Arrière-plan semi-sombre flouté léger */
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Boîte de dialogue blanche épurée */
+.modal-card {
+  position: relative;
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 360px;
+  padding: 40px 24px 30px 24px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 2;
+  transform: scale(0.95);
+  transition: transform 0.2s ease-out;
+}
+
+.newsletter-modal.open .modal-card {
+  transform: scale(1);
+}
+
+/* Icône Check Verte pure */
+.modal-success-check {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-success-check svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* Titre "Confirmation" */
+.modal-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #131313;
+  margin: 0 0 10px 0;
+}
+
+/* Message descriptif gris */
+.modal-message {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+/* Bouton principal "Continuer" plein écran */
+.btn-modal-action {
+  width: 100%;
+  height: 46px;
+  background-color: var(--primary-green, #308225);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-modal-action:hover {
+  background-color: #25661d;
+}

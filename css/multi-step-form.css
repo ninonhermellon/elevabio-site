@@ -1,0 +1,250 @@
+/* --- CONTENEUR PRINCIPAL --- */
+.form-main-container {
+  max-width: 750px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.form-card {
+  background-color: var(--white, #ffffff);
+  border-radius: var(--radius-md, 20px);
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.form-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark-text, #131313);
+  margin-bottom: 8px;
+}
+.form-header p {
+  color: var(--text-muted, #6b7280);
+  font-size: 15px;
+}
+
+/* --- BARRE DE PROGRESSION --- */
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+}
+.progress-line {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  height: 4px;
+  background-color: #e5e7eb;
+  width: 100%;
+  z-index: 1;
+  transition: width 0.3s ease;
+}
+.step-indicator {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+}
+.step-indicator span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.step-indicator label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+.step-indicator.active span {
+  background-color: var(--primary-green, #308225);
+  color: white;
+  box-shadow: 0 0 0 6px rgba(48, 130, 37, 0.15);
+}
+.step-indicator.active label {
+  color: var(--primary-green, #308225);
+  font-weight: 700;
+}
+.step-indicator.completed span {
+  background-color: var(--secondary-orange, #f9932f);
+  color: white;
+}
+
+/* --- GESTION DES ETAPES --- */
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+.step-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* --- GRILLE DES CHAMPS INPUT --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.full-width {
+  grid-column: span 2;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+.required { color: #ef4444; }
+.optional { color: #9ca3af; font-weight: 400; }
+
+.input-group input, .input-group select {
+  height: 48px;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-sm, 14px);
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-group input:focus, .input-group select:focus {
+  border-color: var(--primary-green, #308225);
+}
+
+/* --- CARTES MODULES DE FORMATION --- */
+.radio-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.level-card { cursor: pointer; }
+.level-card input { position: absolute; opacity: 0; }
+.level-card-content {
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-sm, 14px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.2s;
+}
+.level-icon { font-size: 28px; }
+.level-card-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--dark-text); }
+.level-card-content p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+.level-card input:checked + .level-card-content {
+  border-color: var(--primary-green, #308225);
+  background-color: rgba(48, 130, 37, 0.02);
+}
+
+/* --- TUILES MODES DE PAIEMENT --- */
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.payment-tile { cursor: pointer; }
+.payment-tile input { position: absolute; opacity: 0; }
+.tile-design {
+  border: 2px solid #e5e7eb;
+  padding: 16px;
+  text-align: center;
+  border-radius: var(--radius-sm, 14px);
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.payment-tile input:checked + .tile-design {
+  border-color: var(--secondary-orange, #f9932f);
+  background-color: rgba(249, 147, 47, 0.04);
+  color: var(--secondary-orange);
+}
+
+/* --- BOX RECAPITULATIF --- */
+.summary-box {
+  background-color: var(--cream, #f5f5f0);
+  border-radius: var(--radius-sm, 14px);
+  padding: 20px;
+  margin-top: 25px;
+}
+.summary-box h4 { margin-top: 0; font-size: 15px; color: var(--dark-text); margin-bottom: 12px; }
+.summary-box p { font-size: 14px; margin: 6px 0; color: #4b5563; }
+
+/* --- NAVIGATION BUTTONS --- */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+.btn-nav {
+  height: 48px;
+  padding: 0 30px;
+  border-radius: var(--radius-sm, 14px);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-prev {
+  background: none;
+  border: 2px solid #e5e7eb;
+  color: var(--text-muted);
+}
+.btn-prev:hover:not(:disabled) { background-color: #f9fafb; }
+.btn-next {
+  background-color: var(--primary-green, #308225);
+  border: none;
+  color: white;
+}
+.btn-next:hover { transform: translateY(-1px); box-shadow: 0 5px 15px rgba(48,130,37,0.2); }
+.btn-nav:disabled { opacity: 0.5; cursor: not-allowed; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  .form-card { padding: 24px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .full-width { grid-column: span 1; }
+  .payment-grid { grid-template-columns: 1fr 1fr; }
+  .step-indicator label { display: none; }
+}

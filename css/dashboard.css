@@ -1,0 +1,948 @@
+/* --- INITIALISATION ET COULEURS MAQUETTE --- */
+:root {
+  --eb-dashboard-bg: #f8f9fa;
+  --eb-sidebar-w: 260px;
+  --eb-dark: #111827;
+  --eb-gray-muted: #6b7280;
+  --eb-border-color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--eb-dashboard-bg);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--eb-dark);
+}
+
+.eb-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- STRUCTURE FIXE DE LA SIDEBAR --- */
+.eb-sidebar {
+  width: var(--eb-sidebar-w);
+  background-color: #ffffff;
+  border-right: 1px solid var(--eb-border-color);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.eb-brand {
+  height: 70px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--eb-border-color);
+}
+
+.eb-logo-container {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(48, 130, 37, 0.1);
+  color: var(--primary-green, #308225);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.eb-brand-name {
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--eb-dark);
+  display: block;
+  line-height: 1.2;
+}
+
+.eb-brand-sub {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary-green, #308225);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.eb-menu {
+  padding: 24px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eb-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  color: var(--eb-gray-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.eb-icon {
+  width: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.eb-menu-link:hover, 
+.eb-menu-link.active {
+  background-color: rgba(48, 130, 37, 0.06);
+  color: var(--primary-green, #308225);
+  font-weight: 600;
+}
+
+/* --- STRUCTURE CONTENANT PRINCIPAL --- */
+.eb-main-panel {
+  flex: 1;
+  margin-left: var(--eb-sidebar-w);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* TOPBAR */
+.eb-topbar {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--eb-border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.eb-search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eb-search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 14px;
+  color: var(--eb-gray-muted);
+}
+
+.eb-search-bar input {
+  height: 38px;
+  width: 280px;
+  border: 1px solid var(--eb-border-color);
+  border-radius: 8px;
+  padding-left: 38px;
+  padding-right: 14px;
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+  background-color: #f9fafb;
+  transition: border-color 0.15s ease;
+}
+
+.eb-search-bar input:focus {
+  border-color: var(--primary-green, #308225);
+  background-color: #ffffff;
+}
+
+.eb-admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eb-profile-details {
+  text-align: right;
+}
+
+.eb-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--eb-dark);
+  display: block;
+}
+
+.eb-userrole {
+  font-size: 11px;
+  color: var(--eb-gray-muted);
+}
+
+.eb-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary-green, #308225);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ZONE INTERNE */
+.eb-content-wrapper {
+  padding: 32px;
+}
+
+/* GRILLE DE KPI */
+.eb-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eb-kpi-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--eb-border-color);
+}
+
+.eb-kpi-title {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: var(--eb-gray-muted);
+  font-weight: 500;
+}
+
+.eb-kpi-num {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--eb-dark);
+}
+
+/* COMPOSANT TABLEAU BLANC */
+.eb-table-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--eb-border-color);
+  padding: 24px;
+}
+
+.eb-table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.eb-table-card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.eb-btn-add {
+  background-color: var(--primary-green, #308225);
+  color: #ffffff;
+  border: none;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eb-responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.eb-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.eb-dashboard-table th {
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--eb-gray-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--eb-border-color);
+  background-color: #f9fafb;
+}
+
+.eb-dashboard-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--eb-border-color);
+  color: #374151;
+}
+
+.eb-client-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eb-client-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #f3f4f6;
+  color: var(--eb-dark);
+  font-size: 11.5px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eb-client-name {
+  font-weight: 600;
+  color: var(--eb-dark);
+}
+
+.eb-client-location {
+  font-size: 12px;
+  color: var(--eb-gray-muted);
+}
+
+.eb-weight-600 { font-weight: 600; }
+.eb-text-right { text-align: right; }
+
+/* BADGES ET STATUTS */
+.eb-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.eb-status-badge.success {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.eb-status-badge.warning {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.eb-btn-edit {
+  background: none;
+  border: 1px solid var(--eb-border-color);
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--eb-gray-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.eb-btn-edit:hover {
+  border-color: var(--primary-green, #308225);
+  color: var(--primary-green, #308225);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .eb-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+/* --- COMPORTEMENT DYNAMIQUE DES SECTIONS --- */
+.dashboard-section {
+  display: none; /* Cache toutes les sections par défaut */
+}
+
+.dashboard-section.active {
+  display: block; /* Affiche uniquement la section active */
+}
+
+/* --- STRUCTURE DE LA LIGNE DES GRAPHIQUES --- */
+.eb-charts-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Le graphique linéaire prend plus de place */
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eb-chart-box {
+  background-color: #ffffff;
+  border: 1px solid var(--eb-border-color);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.eb-chart-header h3 {
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--eb-dark);
+}
+
+.eb-chart-header h3 i {
+  color: var(--primary-green, #308225);
+  margin-right: 8px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 260px; /* Force un alignement propre au pixel près */
+}
+
+/* Adaptabilité tablettes */
+@media (max-width: 1100px) {
+  .eb-charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- CONFIGURATION DES ACCÈS ÉQUIPE --- */
+.eb-section-subtitle {
+  font-size: 13.5px;
+  color: var(--eb-gray-muted);
+  margin: 4px 0 0 0;
+  font-weight: 400;
+}
+
+/* Badges de rôles distinctifs */
+.eb-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.badge-admin {
+  background-color: rgba(48, 130, 37, 0.08);
+  color: var(--primary-green, #308225);
+}
+
+.badge-veto {
+  background-color: #f0fdfa;
+  color: #0d9488;
+}
+
+.badge-manager {
+  background-color: #f0f9ff;
+  color: #0284c7;
+}
+
+/* Couleurs personnalisées pour différencier les avatars de l'équipe */
+.user-av-color-1 { background-color: #e0f2fe; color: #0369a1; }
+.user-av-color-2 { background-color: #ccfbf1; color: #0f766e; }
+.user-av-color-3 { background-color: #fef3c7; color: #b45309; }
+
+/* --- STYLISATION SPÉCIFIQUE DU FORMULAIRE NOUVEAU COLLABORATEUR --- */
+
+/* Alignement et comportement du sélecteur de rôles */
+#form-nouveau-user select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--eb-border-color);
+  border-radius: 6px;
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--eb-dark);
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none; /* Supprime le style natif du navigateur */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px; /* Évite la superposition du texte sur la flèche svg */
+}
+
+#form-nouveau-user select:focus {
+  border-color: var(--primary-green, #308225);
+}
+
+/* Alignement du champ de mot de passe masqué */
+#form-nouveau-user input[type="password"] {
+  letter-spacing: 0.12em; /* Espace élégamment les puces de sécurité •••• */
+  font-family: inherit;
+}
+
+#form-nouveau-user input[type="password"]::placeholder {
+  letter-spacing: normal; /* Remet le placeholder "••••••••" à un espacement standard */
+}
+
+/* Amélioration de l'état survolé du bouton de création de compte */
+#form-nouveau-user .eb-btn-submit {
+  background-color: var(--primary-green, #308225);
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+#form-nouveau-user .eb-btn-submit:hover {
+  background-color: #26691d; /* Vert légèrement plus soutenu au survol */
+}
+
+#form-nouveau-user .eb-btn-submit:active {
+  transform: scale(0.98); /* Léger effet d'enfoncement au clic */
+}
+
+/* --- STYLE DU MODAL DE CONTRÔLE D'ACCÈS --- */
+.eb-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.4); /* Teinte sombre adoucie */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.eb-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.eb-modal-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(0.95);
+  transition: transform 0.2s ease-out;
+}
+
+.eb-modal-overlay.open .eb-modal-card {
+  transform: scale(1);
+}
+
+.eb-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--eb-border-color, #e5e7eb);
+  padding-bottom: 14px;
+}
+
+.eb-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.eb-modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.eb-modal-close:hover {
+  color: #111827;
+}
+
+/* Formulaires */
+.eb-form-group {
+  margin-bottom: 18px;
+}
+
+.eb-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.eb-form-group input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--eb-border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.eb-form-group input:focus {
+  border-color: var(--primary-green, #308225);
+  background-color: #ffffff;
+}
+
+/* Menu de sélection personnalisé */
+.eb-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.eb-select-wrapper select {
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--eb-border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 0 36px 0 14px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: #111827;
+  background-color: #f9fafb;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.eb-select-wrapper select:focus {
+  border-color: var(--primary-green, #308225);
+  background-color: #ffffff;
+}
+
+/* Style de sécurité pour les ronds du mot de passe */
+.eb-form-group input[type="password"] {
+  letter-spacing: 0.15em;
+}
+
+.eb-form-group input[type="password"]::placeholder {
+  letter-spacing: normal;
+}
+
+/* Bouton principal de soumission */
+.eb-btn-submit {
+  width: 100%;
+  height: 44px;
+  background-color: var(--primary-green, #308225);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.eb-btn-submit:hover {
+  background-color: #25661c;
+}
+
+.eb-btn-submit:active {
+  transform: scale(0.99);
+}
+
+/* --- DESIGN DES OPTIONS DE DROITS & PERMISSIONS --- */
+.eb-droits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.eb-droit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.eb-droit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.eb-droit-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.eb-droit-desc {
+  font-size: 11.5px;
+  color: #6b7280;
+}
+
+/* Le bouton interrupteur (Switch) */
+.eb-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.eb-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.eb-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5db;
+  transition: .2s;
+  border-radius: 22px;
+}
+
+.eb-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+input:checked + .eb-slider {
+  background-color: var(--primary-green, #308225);
+}
+
+input:focus + .eb-slider {
+  box-shadow: 0 0 1px var(--primary-green, #308225);
+}
+
+input:checked + .eb-slider:before {
+  transform: translateX(18px);
+}
+
+/* --- COMPOSANTS DE LA BASE CLIENTS --- */
+.font-13 { font-size: 13px !important; }
+
+.eb-form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Badges d'élevage colorés */
+.eb-breed-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.eb-breed-badge.goliath {
+  background-color: #fef2f2;
+  color: #dc2626; /* Rouge Brique pour la lignée Goliath */
+}
+
+.eb-breed-badge.brahma {
+  background-color: #fff7ed;
+  color: #ea580c; /* Orange Sombre pour la lignée Brahma */
+}
+
+.eb-breed-badge.mixte {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+/* Bouton action suppression de ligne */
+.eb-btn-delete-row {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.eb-btn-delete-row:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+/* Nuances avatars clients */
+.client-av-1 { background-color: #f3e8ff; color: #6b21a8; }
+.client-av-2 { background-color: #ecfdf5; color: #047857; }
+
+
+/* --- COMPOSANTS LOGISTIQUE COUVOIR --- */
+.eb-status-badge.warning {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.eb-status-badge.complete {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.eb-status-badge.success {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.eb-status-badge.danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Assurez-vous que ce comportement est bien défini */
+.dashboard-section {
+  display: none;
+}
+
+.dashboard-section.active {
+  display: block !important;
+}
+
+/* FORCE LE COMPORTEMENT DE MASQUAGE DES ONGLETS */
+.dashboard-section {
+  display: none !important;
+}
+
+.dashboard-section.active {
+  display: block !important;
+}
+
+/* BADGES COMPLÉMENTAIRES POUR LES COMMANDES */
+.eb-status-badge.warning {
+  background-color: #fef3c7;
+  color: #d97706;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* STATUTS DE PAIEMENT */
+.eb-status-badge.partial {
+  background-color: #ffedd5;
+  color: #ea580c;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.eb-status-badge.paid {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.eb-status-badge.unpaid {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* --- SECTION PARAMÈTRES --- */
+.eb-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.eb-settings-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--eb-border-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.eb-settings-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: var(--eb-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* --- CORRECTIF NAVIGATION --- */
+.dashboard-section {
+  display: none !important;
+}
+
+.dashboard-section.active {
+  display: block !important;
+}
+
+/* --- NAVIGATION UNIFIÉE --- */
+.dashboard-section {
+  display: none;
+}
+
+.dashboard-section.active {
+  display: block;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevaBio | Poussins</title>
+  <!-- En-têtes de sécurité (miroir .htaccess — defense in depth) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <script src="js/security.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product-page.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body data-page="produit-poussins">
+    <header class="site-header site-header--solid" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="52" height="52">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html" class="active" data-nav="index"><i class="fa-solid fa-house"></i>Accueil</a>
+          <a href="races.html" class="active" data-nav="races"><i class="fa-solid fa-layer-group"></i>Nos Races</a>
+          <a href="commande.html" class="active" data-nav="commande"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+          <a href="formation.html" class="active" data-nav="formation"><i class="fa-solid fa-graduation-cap"></i>Formation</a>
+          <a href="faq.html" class="active" data-nav="faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-phone"></i>Contact</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-circle-info"></i>Info</a>
+        </nav>
+        <div class="header-actions">
+          <a style="color: white;" href="form.html" class="btn btn-lime">
+            <i class="fa-solid fa-user"></i>
+            Espace Compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a> / 
+      <a href="commande.html">Produits</a> / 
+      <span style="color: #f9932f;"><b>Poussins</b></span>
+    </nav>
+
+    <div class="product-main-view">
+      
+      <div class="product-gallery">
+        <div class="main-image-wrapper">
+          <img src="img/Poussins.jpg" alt="Œufs fertiles Goliath Premium" id="main-product-img">
+        </div>
+        <div class="thumbnails-grid">
+          <img src="img/goliath-pure.jpg" alt="Vue 1" class="thumb-item active" onclick="changeImage(this)">
+          <img src="img/brahma-pure.jpg" alt="Vue 2" class="thumb-item" onclick="changeImage(this)">
+          <img src="img/goliath1.jpg" alt="Vue 3" class="thumb-item" onclick="changeImage(this)">
+          <img src="img/71e974e10b9dc1e34da83bfa1c967f49.jpg" alt="Vue 4" class="thumb-item" onclick="changeImage(this)">
+          <img src="img/8004003759e27339e2abe9fc0c6e050a.jpg" alt="Vue 5" class="thumb-item" onclick="changeImage(this)">
+          <img src="img/44347263f66a6d7eb225d0958e88a97d.jpg" alt="Vue 5" class="thumb-item" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <div class="product-details-panel">
+        <span class="product-badge">Race Pure Certifiée</span>
+        <h1 class="product-title">Poussins</h1>
+        
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.9/5</span>
+        </div>
+
+        <div class="product-price">
+          <span class="current-price">1 500 FCFA</span>
+          <span class="price-unit">/ l'unité</span>
+        </div>
+
+        <p class="product-short-desc">
+          Poussins  sélectionnés issus de nos meilleurs parquets. Taux de fertilité testé et garanti à plus de 85% en incubateur artisanal ou industriel.
+        </p>
+
+        <hr class="divider">
+
+        <form class="purchase-options" action="https://wa.me/242068172503" target="_blank" rel="noopener noreferrer">
+          
+          <div class="option-group">
+            <label class="option-label">Sélectionnez la race :</label>
+            <div class="radio-tiles">
+              <label class="tile-card">
+                <input type="radio" name="line" value="goliath" checked>
+                <div class="tile-content">
+                  <span class="tile-title">Goliath</span>
+                  <span class="tile-sub">Croissance rapide</span>
+                </div>
+              </label>
+              <label class="tile-card">
+                <input type="radio" name="line" value="brahma">
+                <div class="tile-content">
+                  <span class="tile-title">Brahma</span>
+                  <span class="tile-sub">+1 000 FCFA / unité</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="quantity-and-cart">
+            <div class="quantity-selector">
+              <button type="button" class="qty-btn" onclick="updateQty(-1)">-</button>
+              <input type="number" id="product-quantity" value="10" min="10" step="1">
+              <button type="button" class="qty-btn" onclick="updateQty(1)">+</button>
+            </div>
+            
+            <button type="submit" class="btn btn-dark">
+              <i class="fa-brands fa-whatsapp"></i>
+              Commander
+            </button>
+          </div>
+        </form>
+
+        <div class="trust-info">
+          <p>🟢 <b>Disponibilité :</b> Expédition sous 48h (Pointe-Noire / Brazzaville)</p>
+          <p>📦 <b>Conditionnement :</b> Cages renforcées anti-chocs incluses</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-tabs-section">
+      <div class="tabs-header" role="tablist">
+        <button class="tab-link active" onclick="openTab(event, 'tab-description')" role="tab" aria-selected="true">Description technique</button>
+        <button class="tab-link" onclick="openTab(event, 'tab-conseils')" role="tab" aria-selected="false">Conseils d'incubation</button>
+        <button class="tab-link" onclick="openTab(event, 'tab-livraison')" role="tab" aria-selected="false">Expédition & Retrait</button>
+      </div>
+
+      <div id="tab-description" class="tab-content active" role="tabpanel">
+        <h3>Caractéristiques de nos Poussins</h3>
+        <p>Nos parquets de reproduction respectent un ratio strict de 1 coq pour 5 poules afin de maximiser le taux de fécondité. Les œufs sont collectés 3 fois par jour, stockés à une température idéale entre 15°C et 18°C, et ne dépassent jamais 5 jours de stockage avant livraison.</p>
+        <ul>
+          <li><b>Poids de l'œuf :</b> 55g à 65g en moyenne</li>
+          <li><b>Souche :</b> Goliath/Brahma Pure  vaccinés contre la maladie de Newcastle et la variole avicole</li>
+          <li><b>Usage recommandé :</b> Incubation artificielle ou couvaison naturelle</li>
+        </ul>
+      </div>
+
+      <div id="tab-conseils" class="tab-content" role="tabpanel">
+        <h3>Réussir l'lelevage</h3>
+        <p>Le poulet Goliath ou Brahma étant des races lourdes et rustiques, voici les paramètres optimaux pour votre incubateur :</p>
+        <ul>
+          <li><b>Jours 1 à 18 :</b> Température de 37,7°C | Humidité à 45% - 50%</li>
+          <li><b>Jours 19 à 21 (Éclosion) :</b> Température de 37,2°C | Humidité augmentée à 65% - 70%</li>
+          <li><b>Retournement :</b> Minimum 3 fois par jour (automatique ou manuel) jusqu'au 18ème jour inclus.</li>
+        </ul>
+      </div>
+
+      <div id="tab-livraison" class="tab-content" role="tabpanel">
+        <h3>Retrait et Livraison au Congo</h3>
+        <p>Nous apportons un soin extrême au transport de la matière vivante :</p>
+        <ul>
+          <li><b>Pointe-Noire :</b> Retrait direct gratuit à notre ferme partenaire (Ngoyo Japon).</li>
+          <li><b>Brazzaville :</b> Expéditions hebdomadaires sécurisées par agences de transport terrestres ou aériennes.</li>
+          <li><b>Autres localités :</b> Nous contacter directement pour évaluer les options de transport logistique.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo">
+        <div class="logo-text">
+          <span class="logo" style="color: #ffffff">ElevaBio</span>
+        </div>
+      </a>
+        <p>Ferme avicole spécialiste des races Goliath et Brahma à Pointe-Noire.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="races.html">Nos Races</a></li>
+          <li><a href="commande.html">Commander</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Espace Compte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Produits et Services</h5>
+        <ul>
+          <li><a href="commande.html">Œufs fertiles</a></li>
+          <li><a href="commande.html">Poussins</a></li>
+          <li><a href="commande.html">Reproducteurs</a></li>
+          <li><a href="formation.html">Formation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Contact</h5>
+        <ul>
+          <li><a href="tel:+242068172503">+242 06 817 25 03</a></li>
+          <li><a href="tel:+242056712241">+242 05 671 22 41</a></li>
+          <li><a href="contact.html">Adresse & Réseaux</a></li>
+          <li><a href="https://wa.me/242068172503" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Ngoyo Japon, Pointe-Noire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-wordmark">
+      <p class="footer-wordmark-text" aria-hidden="true">ElevaBio</p>
+      <a href="commande.html" class="btn btn-lime shop-embed"><i class="fa-solid fa-bag-shopping"></i>Passer commande</a>
+    </div>
+  </footer>
+
+  <script src="js/poussin.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+</html>

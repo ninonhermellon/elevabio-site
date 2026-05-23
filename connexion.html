@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevaBio | Connexion</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <script src="js/security.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+    <style>
+        /* Form-specific styles */
+        body.form-page {
+            background-color: #F3F5F1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-page .split-container {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 680px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .form-page .left-panel {
+            flex: 1;
+            background: var(--gradient-nature);
+            color: var(--white);
+            padding: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .form-page .brand-name {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--white);
+        }
+
+        .form-page .brand-name span {
+            color: var(--secondary-orange);
+        }
+
+        .form-page .features-showcase h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .form-page .features-showcase p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .form-page .left-footer {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .form-page .right-panel {
+            flex: 1.2;
+            padding: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-block {
+            display: none;
+        }
+
+        .form-block.active {
+            display: block;
+        }
+
+        .form-header {
+            margin-bottom: 25px;
+        }
+
+        .form-header h3 {
+            font-size: 26px;
+            color: var(--dark-text);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--dark-text);
+        }
+
+        .password-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(48, 130, 37, 0.15);
+            border-radius: var(--radius-sm);
+            background-color: #fafafa;
+            font-size: 14px;
+            color: var(--dark-text);
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .input-field:focus {
+            border-color: var(--primary-green);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(48, 130, 37, 0.1);
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 14px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        .toggle-password:hover {
+            color: var(--primary-green);
+        }
+
+        .toggle-password svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 14px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--tertiary-green);
+            transform: translateY(-2px);
+        }
+
+        .switch-text {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .switch-text a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .switch-text a:hover {
+            color: var(--tertiary-green);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .form-page .split-container {
+                flex-direction: column;
+            }
+
+            .form-page .left-panel {
+                padding: 30px;
+                min-height: 180px;
+            }
+
+            .form-page .right-panel {
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-row .form-group {
+                flex: 1;
+            }
+        }
+    </style>
+<body data-page="index">
+    
+  <header class="site-header site-header--solid" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="52" height="52">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html" class="active" data-nav="index"><i class="fa-solid fa-house"></i>Accueil</a>
+          <a href="races.html" class="active" data-nav="races"><i class="fa-solid fa-layer-group"></i>Nos Races</a>
+          <a href="commande.html" class="active" data-nav="commande"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+          <a href="formation.html" class="active" data-nav="formation"><i class="fa-solid fa-graduation-cap"></i>Formation</a>
+          <a href="faq.html" class="active" data-nav="faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-phone"></i>Contact</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-circle-info"></i>Info</a>
+        </nav>
+        <div class="header-actions">
+          <a style="color: white;" href="form.html" class="btn btn-lime">
+            <i class="fa-solid fa-user"></i>
+            Espace Compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="split-container">
+    
+    <div class="left-panel">
+        <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo">
+        <div class="logo-text">
+          <span class="logo" style="color: #ffffff">ElevaBio</span>
+        </div>
+      </a>
+        <div class="features-showcase">
+            <h2 id="dynamic-left-title">Rejoignez la communauté ElevaBio.</h2>
+            <p id="dynamic-left-desc">Suivez vos commandes, planifiez vos livraisons et accédez à vos modules de formation en ligne.</p>
+        </div>
+        <div class="left-footer">Espace Client Sécurisé</div>
+    </div>
+
+    <div class="right-panel">
+        
+
+        <div >
+            <div class="form-header">
+                <h3>Bienvenue à nouveau</h3>
+                <p>Connectez-vous pour gérer vos réservations en cours</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Adresse e-mail</label>
+                    <input type="email" id="login-email" class="input-field" placeholder="jamilabemba@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" class="input-field" placeholder="Entrez votre mot de passe" required>
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('login-password', this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="eye-icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Se connecter</button>
+            </form>
+
+            <div class="switch-text">
+                Nouveau chez ElevaBio ? <a href="form.html">Créer un compte</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo">
+        <div class="logo-text">
+          <span class="logo" style="color: #ffffff">ElevaBio</span>
+        </div>
+      </a>
+        <p>Ferme avicole spécialiste des races Goliath et Brahma à Pointe-Noire.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="races.html">Nos Races</a></li>
+          <li><a href="commande.html">Commander</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Espace Compte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Produits et Services</h5>
+        <ul>
+          <li><a href="commande.html">Œufs fertiles</a></li>
+          <li><a href="commande.html">Poussins</a></li>
+          <li><a href="commande.html">Reproducteurs</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;" >Contact</h5>
+        <ul>
+          <li><a href="tel:+242068172503">+242 06 817 25 03</a></li>
+          <li><a href="tel:+242056712241">+242 05 671 22 41</a></li>
+          <li><a href="contact.html">Adresse & Réseaux</a></li>
+          <li><a href="https://wa.me/242068172503" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Ngoyo Japon, Pointe-Noire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-wordmark">
+      <p class="footer-wordmark-text" aria-hidden="true">ElevaBio</p>
+      <a href="commande.html" class="btn btn-lime shop-embed">Passer commande</a>
+    </div>
+  </footer>
+
+<script>
+    // Fonction commune pour afficher/masquer le mot de passe
+    function togglePasswordVisibility(inputId, button) {
+        const input = document.getElementById(inputId);
+        const svg = button.querySelector('svg');
+        
+        if (input.type === "password") {
+            input.type = "text";
+            // Changement visuel : Icône œil barré (mode "visible")
+            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.326 16.178 7.26 19.5 12 19.5c.997 0 1.963-.14 2.883-.4a10.43 10.43 0 0 0 5.253-2.923m.902-3.175a10.407 10.407 0 0 0-3.345-4.437M15.42 15.42a3 3 0 1 1-4.243-4.243M9.878 9.878l4.242 4.242M9.878 9.878 5.636 5.636m12.728 12.728L14.242 14.24" />`;
+        } else {
+            input.type = "password";
+            // Retour à l'icône œil ouvert normal (mode "masqué")
+            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />`;
+        }
+    }
+
+    // Basculer entre Inscription et Connexion
+    function toggleForm(formType) {
+        const registerBlock = document.getElementById('register-block');
+        const loginBlock = document.getElementById('login-block');
+        const leftTitle = document.getElementById('dynamic-left-title');
+        const leftDesc = document.getElementById('dynamic-left-desc');
+
+        if (formType === 'login') {
+            registerBlock.classList.remove('active');
+            loginBlock.classList.add('active');
+            leftTitle.innerText = "Ravi de vous revoir !";
+            leftDesc.innerText = "Accédez instantanément à votre espace membre, téléchargez vos supports de cours avicoles et suivez l'état de couvaison de vos lots.";
+        } else {
+            loginBlock.classList.remove('active');
+            registerBlock.classList.add('active');
+            leftTitle.innerText = "Rejoignez la communauté ElevaBio.";
+            leftDesc.innerText = "Suivez vos commandes d'œufs fertiles, planifiez vos livraisons de poussins et accédez à vos modules de formation avicole en ligne.";
+        }
+    }
+
+    // Gestion de l'inscription avec vérification de concordance
+    function handleRegister(e) {
+        e.preventDefault();
+        
+        const password = document.getElementById('reg-password').value;
+        const confirmPassword = document.getElementById('reg-confirm-password').value;
+
+        // Sécurité fondamentale : Vérification de la correspondance des mots de passe
+        if (password !== confirmPassword) {
+            alert("⚠️ Erreur : Les deux mots de passe ne correspondent pas. Veuillez vérifier.");
+            return;
+        }
+
+        alert("Inscription réussie ! Bienvenue chez ElevaBio.");
+    }
+
+    function handleLogin(e) {
+        e.preventDefault();
+        alert("Connexion réussie ! Redirection vers votre espace.");
+    }
+</script>
+<script src="js/main.js"></script>
+<script src="js/all.min.js"></script>
+
+</body>
+</html>

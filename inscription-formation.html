@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Formation | ElevaBio</title>
+  <!-- En-têtes de sécurité (miroir .htaccess — defense in depth) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <script src="js/security.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/multi-step-form.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+
+  <main class="form-main-container">
+    <div class="form-card">
+      <div class="form-header">
+        <h2>Inscription à la Formation Avicole</h2>
+        <p>Développez vos compétences avec les experts d'ElevaBio</p>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-line" id="progress-line"></div>
+        <div class="step-indicator active" data-step="1"><span>1</span><label>Profil</label></div>
+        <div class="step-indicator" data-step="2"><span>2</span><label>Contact</label></div>
+        <div class="step-indicator" data-step="3"><span>3</span><label>Niveau</label></div>
+        <div class="step-indicator" data-step="4"><span>4</span><label>Paiement</label></div>
+      </div>
+
+      <form id="multi-step-form" autocomplete="off">
+        
+        <div class="form-step active" id="step-1">
+          <h3 class="step-title">1. Informations Personnelles</h3>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="nom">Nom <span class="required">*</span></label>
+              <input type="text" id="nom" name="nom" required placeholder="Ex: Hermellon">
+            </div>
+            <div class="input-group">
+              <label for="prenom">Prénom <span class="required">*</span></label>
+              <input type="text" id="prenom" name="prenom" required placeholder="Ex: Ninon">
+            </div>
+            <div class="input-group">
+              <label for="date_naissance">Date de naissance <span class="required">*</span></label>
+              <input type="date" id="date_naissance" name="date_naissance" required>
+            </div>
+            <div class="input-group">
+              <label for="lieu_naissance">Lieu de naissance <span class="required">*</span></label>
+              <input type="text" id="lieu_naissance" name="lieu_naissance" required placeholder="Ex: Pointe-Noire">
+            </div>
+            <div class="input-group full-width">
+              <label for="nationalite">Nationalité <span class="required">*</span></label>
+              <input type="text" id="nationalite" name="nationalite" required placeholder="Ex: Congolaise">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-2">
+          <h3 class="step-title">2. Vos Coordonnées</h3>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="ville">Ville de résidence <span class="required">*</span></label>
+              <select id="ville" name="ville" required>
+                <option value="" disabled selected>Sélectionnez votre ville</option>
+                <option value="Pointe-Noire">Pointe-Noire</option>
+                <option value="Brazzaville">Brazzaville</option>
+                <option value="Dolisie">Dolisie</option>
+                <option value="Nkayi">Nkayi</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="arrondissement">Arrondissement <span class="required">*</span></label>
+              <input type="text" id="arrondissement" name="arrondissement" required placeholder="Ex: 6 Ngoyo">
+            </div>
+            <div class="input-group">
+              <label for="quartier">Quartier <span class="required">*</span></label>
+              <input type="text" id="quartier" name="quartier" required placeholder="Ex: Japon">
+            </div>
+            <div class="input-group">
+              <label for="adresse">Adresse géographique <span class="optional">(Facultatif)</span></label>
+              <input type="text" id="adresse" name="adresse" placeholder="Ex: Rue 12, Carré 4">
+            </div>
+            <div class="input-group">
+              <label for="telephone">Numéro de Téléphone <span class="required">*</span></label>
+              <input type="tel" id="telephone" name="telephone" required placeholder="Ex: 06 817 25 03">
+            </div>
+            <div class="input-group">
+              <label for="whatsapp">Numéro WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Ex: 06 817 25 03">
+            </div>
+            <div class="input-group full-width">
+              <label for="email">Adresse Email <span class="optional">(Facultatif)</span></label>
+              <input type="email" id="email" name="email" placeholder="Ex: contact@elevabio.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-3">
+          <h3 class="step-title">3. Niveau de Formation Souhaité</h3>
+          <p class="step-desc">Sélectionnez le module qui correspond le mieux à vos objectifs professionnels :</p>
+          
+          <div class="radio-cards-stack">
+            <label class="level-card">
+              <input type="radio" name="niveau" value="débutant" checked>
+              <div class="level-card-content">
+                <span class="level-icon">🌱</span>
+                <div>
+                  <h4>Niveau Débutant</h4>
+                  <p>Bases de l'aviculture, gestion des parquets, alimentation et biosécurité élémentaire.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="level-card">
+              <input type="radio" name="niveau" value="intermédiaire">
+              <div class="level-card-content">
+                <span class="level-icon">🐔</span>
+                <div>
+                  <h4>Niveau Intermédiaire</h4>
+                  <p>Suivi de prophylaxie complet, incubation artificielle avancée et optimisation du taux d'éclosion.</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="level-card">
+              <input type="radio" name="niveau" value="avancé">
+              <div class="level-card-content">
+                <span class="level-icon">📊</span>
+                <div>
+                  <h4>Niveau Avancé</h4>
+                  <p>Management de grande exploitation, rentabilité financière (Goliath/Brahma) et stratégie de distribution.</p>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-4">
+          <h3 class="step-title">4. Mode de Règlement & Validation</h3>
+          <p class="step-desc">Choisissez votre moyen de paiement pour bloquer votre place :</p>
+
+          <div class="payment-grid">
+            <label class="payment-tile">
+              <input type="radio" name="paiement" value="Espece" checked>
+              <div class="tile-design">💵 Espece</div>
+            </label>
+            <label class="payment-tile">
+              <input type="radio" name="paiement" value="Airtel Money">
+              <div class="tile-design">❤️ Airtel Money</div>
+            </label>
+            <label class="payment-tile">
+              <input type="radio" name="paiement" value="MTN MoMo">
+              <div class="tile-design">💛 MTN MoMo</div>
+            </label>
+            <label class="payment-tile">
+              <input type="radio" name="paiement" value="Virement bancaire">
+              <div class="tile-design">🏦 Virement</div>
+            </label>
+            <label class="payment-tile">
+              <input type="radio" name="paiement" value="Chèque">
+              <div class="tile-design">✍️ Chèque</div>
+            </label>
+          </div>
+
+          <div class="summary-box">
+            <h4>Résumé de votre inscription :</h4>
+            <p><strong>Candidat :</strong> <span id="summary-name">-</span></p>
+            <p><strong>Formation :</strong> <span id="summary-level">-</span></p>
+            <p><strong>Règlement :</strong> <span id="summary-payment">-</span></p>
+          </div>
+        </div>
+
+        <div class="form-navigation">
+          <button type="button" class="btn-nav btn-prev" id="btn-prev" disabled>Précédent</button>
+          <button type="button" class="btn-nav btn-next" id="btn-next">Suivant</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="js/multi-step-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElevaBio | Ferme Avicole</title>
+  <!-- En-têtes de sécurité (miroir .htaccess — defense in depth) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https:; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <script src="js/security.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="import" href="fonts/PlusJakartaSans-Regular.ttf">
+  <link rel="import" href="fonts/PlusJakartaSans-Bold.ttf">
+    <link rel="import" href="fonts/PlusJakartaSans-BoldItalic.ttf">
+      <link rel="import" href="fonts/PlusJakartaSans-ExtraBold.ttf">
+        <link rel="import" href="fonts/PlusJakartaSans-Medium.ttf">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body data-page="index">
+
+  <header class="site-header site-header--solid" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrapper">
+        <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo" width="52" height="52">
+        <div class="logo-text">
+          <span class="logo-brand">ElevaBio</span>
+          <span class="logo-tag">Ferme avicole</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="site-nav" id="site-nav">
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html" class="active" data-nav="index"><i class="fa-solid fa-house"></i>Accueil</a>
+          <a href="races.html" class="active" data-nav="races"><i class="fa-solid fa-layer-group"></i>Nos Races</a>
+          <a href="commande.html" class="active" data-nav="commande"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+          <a href="formation.html" class="active" data-nav="formation"><i class="fa-solid fa-graduation-cap"></i>Formation</a>
+          <a href="faq.html" class="active" data-nav="faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-phone"></i>Contact</a>
+          <a href="contact.html" class="active" data-nav="contact"> <i class="fa-solid fa-circle-info"></i>Info</a>
+        </nav>
+        <div class="header-actions">
+          <a style="color: white;" href="form.html" class="btn btn-lime">
+            <i class="fa-solid fa-user"></i>
+            Espace Compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="img/poules.jpg" alt="Ferme avicole ElevaBio">
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <span class="score">100%</span>
+          <p class="stat-label">Races pures</p>
+        </div>
+      </div>
+
+      <div class="hero-content container">
+        <h1 class="hero-title">L'excellence avicole<br>Goliath et Brahma</h1>
+        <p class="hero-subtitle">Élevage premium de races rares. Œufs fertiles, poussins, reproducteurs et formations pour réussir votre projet avicole.</p>
+        <div class="hero-actions">
+          <a href="commande.html" class="btn btn-lime">Passer commande</a>
+          <a href="https://wa.me/242068172503" class="btn btn-bio" target="_blank" rel="noopener noreferrer"><b>+242</b>06 817 25 03</a>
+        </div>
+      </div>
+
+      <div class="hero-cards container">
+        <div class="hero-cards-grid">
+          <article class="product-mini-card">
+            <div>
+              <h3>Poulet Goliath</h3>
+              <p>La plus grande race de poule au monde, rusticité et production exceptionnelles.</p>
+              <a href="races.html#goliath" class="btn btn-dark">Découvrir</a>
+            </div>
+            <img class="thumb" src="img/goliath-pure.jpg" alt="Poulet Goliath">
+          </article>
+          <article class="product-mini-card">
+            <div>
+              <h3>Brahma</h3>
+              <p>Le <b>« roi des poulets »</b> majestueux, docile, idéal pour la reproduction.</p>
+              <a href="races.html#brahma" class="btn btn-lime">Découvrir</a>
+            </div>
+            <img class="thumb" src="img/brahma-pure.jpg" alt="Poulet Brahma">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow">Nos Produits</p>
+        <h2 class="section-title">Commandez en toute confiance</h2>
+        <div class="product-grid-4" style="margin-top:32px">
+          <article class="product-tile">
+            <img src="img/Œufs fertiles.jpg" alt="Œufs fertiles" style="height:200px;object-fit:cover;border-radius:16px;width:100%">
+            <h3>Œufs fertiles</h3>
+            <p>Œufs sélectionnés à haut taux d'éclosion.</p>
+            <a href="commande.html" class="btn btn-lime">Commander</a>
+          </article>
+          <article class="product-tile">
+            <img src="img/Poussins.jpg" alt="Poussins" style="height:200px;object-fit:cover;border-radius:16px;width:100%">
+            <h3>Poussins</h3>
+            <p>Poussins en bonne santé, vaccinés et robustes.</p>
+            <a href="commande.html" class="btn btn-lime">Commander</a>
+          </article>
+          <article class="product-tile">
+            <img src="img/Reproducteurs.jpg" alt="Reproducteurs" style="height:200px;object-fit:cover;border-radius:16px;width:100%">
+            <h3>Reproducteurs</h3>
+            <p>Reproducteurs Goliath et Brahma de race pure.</p>
+            <a href="commande.html" class="btn btn-lime">Commander</a>
+          </article>
+          <article class="product-tile">
+            <img src="img/Formation.jpg" alt="Formation" style="height:200px;object-fit:cover;border-radius:16px;width:100%">
+            <h3>Formation</h3>
+            <p>Programmes pratiques pour aviculteurs.</p>
+            <a href="formation.html" class="btn btn-lime">Commander</a>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:24px"><a href="commande.html" class="btn btn-outline">Voir tout</a></p>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--cream)">
+      <div class="container">
+        <p class="section-eyebrow">Nos Races</p>
+        <h2 class="section-title">Goliath et Brahma : la noblesse avicole</h2>
+        <p class="section-desc" style="margin:16px 0 40px">Deux races d'exception sélectionnées pour leur taille, leur robustesse et leur rendement remarquable.</p>
+        <div class="race-grid">
+          <article class="race-card">
+            <img src="img/goliath-pure.jpg" alt="Poulet Goliath">
+            <div class="race-card-body">
+              <h3>Goliath</h3>
+              <p>La plus grande race de poule au monde. Excellente production de viande, rusticité exceptionnelle, parfaitement adaptée au climat tropical.</p>
+              <ul>
+                <li>Poids adulte : jusqu'à 7 kg</li>
+                <li>Forte rusticité et adaptabilité</li>
+                <li>Viande savoureuse, très demandée</li>
+              </ul>
+              <a href="races.html#goliath" class="btn btn-outline" style="margin-top:16px">En savoir plus</a>
+            </div>
+          </article>
+          <article class="race-card">
+            <img src="img/brahma-pure.jpg" alt="Poulet Brahma">
+            <div class="race-card-body">
+              <h3>Brahma</h3>
+              <p>Race majestueuse dite « roi des poulets ». Plumage soyeux, tempérament docile, idéale pour la reproduction et l'ornement.</p>
+              <ul>
+                <li>Poids adulte : 5 à 6 kg</li>
+                <li>Pattes emplumées caractéristiques</li>
+                <li>Ponte régulière en hiver</li>
+              </ul>
+              <a href="races.html#brahma" class="btn btn-outline" style="margin-top:16px">En savoir plus</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-eyebrow">Ferme Elevabio</p>
+        <h2 class="section-title">Pourquoi Elevabio ?</h2>
+        <p class="section-desc" style="margin:12px 0 0">Une ferme engagée pour votre réussite.</p>
+        <div class="why-cards" style="margin-top:40px">
+          <article class="why-card">
+            <h3>Qualité garantie</h3>
+            <p>Sujets sains, vaccinés, traçabilité complète.</p>
+          </article>
+          <article class="why-card">
+            <h3>Races pures</h3>
+            <p>Lignées Goliath et Brahma certifiées 100 %.</p>
+          </article>
+          <article class="why-card">
+            <h3>Accompagnement</h3>
+            <p>Conseils et formations pour démarrer sereinement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="newsletter">
+          <div class="newsletter-bg">
+            <img src="img/Formation.jpg" alt="Ferme avicole">
+          </div>
+          <div class="newsletter-content">
+            <h2>Prêt à démarrer votre élevage ?</h2>
+            <p class="hero-subtitle" style="margin:0 auto 28px">Contactez-nous dès aujourd'hui pour réserver vos œufs fertiles, poussins ou reproducteurs.</p>
+            <div class="hero-actions" style="justify-content:center">
+              <a href="commande.html" class="btn btn-lime">Passer commande</a>
+              <a href="https://wa.me/242068172503" class="btn btn-ghost-white" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrapper">
+          <img src="img/favicon.png" alt="Logo ElevaBio" class="site-logo">
+          <div class="logo-text">
+            <span class="logo" style="color: #ffffff">ElevaBio</span>
+          </div>
+        </a>
+        <p>Ferme avicole spécialiste des races Goliath et Brahma à Pointe-Noire.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;">Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="races.html">Nos Races</a></li>
+          <li><a href="commande.html">Commander</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Espace Compte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;">Produits et Services</h5>
+        <ul>
+          <li><a href="commande.html">Œufs fertiles</a></li>
+          <li><a href="commande.html">Poussins</a></li>
+          <li><a href="commande.html">Reproducteurs</a></li>
+          <li><a href="formation.html">Formation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 style="color: white;">Contact</h5>
+        <ul>
+          <li><a href="tel:+242068172503">+242 06 817 25 03</a></li>
+          <li><a href="tel:+242056712241">+242 05 671 22 41</a></li>
+          <li><a href="contact.html">Adresse & Réseaux</a></li>
+          <li><a href="https://wa.me/242068172503" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li>Ngoyo Japon, Pointe-Noire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-wordmark">
+      <p class="footer-wordmark-text" aria-hidden="true">ElevaBio</p>
+      <a href="commande.html" class="btn btn-lime shop-embed">Passer commande</a>
+    </div>
+  </footer>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+</html>
